@@ -4,12 +4,37 @@ function createButtonElement(buttonName) {
   return createElement("button", {
     innerText: buttonName,
     value: buttonName,
+    className: "numberButton",
+    onclick: function () {
+      result.value = this.innerText;
+    },
   });
 }
 
+const addButton = createElement("button", {
+  innerText: "+",
+  className: "mathButton",
+  onclick: function () {
+    result.value = Number(result.value);
+  },
+});
+
 export function createCalculator() {
-  const headline = createElement("h2", {
-    innerText: "Calculator",
+  // const headline = createElement("h2", {
+  //   innerText: "Calculator",
+  // });
+
+  const result = createElement("input", {
+    type: "text",
+    value: "0",
+  });
+
+  const probeButton = createElement("button", {
+    innerText: "probe",
+    value: "100",
+    onclick: function () {
+      result.value = this.value;
+    },
   });
 
   const button1 = createButtonElement(1);
@@ -27,11 +52,18 @@ export function createCalculator() {
   const buttonMulti = createButtonElement("*");
   const buttonDiv = createButtonElement("/");
   const buttonPoint = createButtonElement(".");
+  const buttonReset = createButtonElement("AC");
+  const buttonResult = createButtonElement("=");
 
   return createElement("div", {
     className: "calculator",
     children: [
-      headline,
+      createElement("p", {
+        innerText: "CALCULATOR",
+        className: "headline",
+      }),
+      // headline,
+      result,
       button1,
       button2,
       button3,
@@ -47,6 +79,9 @@ export function createCalculator() {
       buttonMulti,
       buttonDiv,
       buttonPoint,
+      buttonReset,
+      buttonResult,
+      probeButton,
     ],
   });
 }
