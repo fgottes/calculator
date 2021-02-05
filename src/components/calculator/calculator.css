@@ -1,0 +1,18 @@
+.calculator {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.numberButton {
+  color: red;
+}
+
+.mathButton {
+  color: orange;
+}
+
+.headline {
+  display: grid;
+}

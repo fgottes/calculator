@@ -1,37 +1,152 @@
 import { createElement } from "../../utils/createElement.js";
 
-function createButtonElement(buttonName) {
-  return createElement("button", {
-    innerText: buttonName,
-    value: buttonName,
-  });
-}
+const addButton = createElement("button", {
+  innerText: "+",
+  className: "mathButton",
+  onclick: function () {
+    result.value = Number(result.value);
+  },
+});
 
 export function createCalculator() {
-  const headline = createElement("h2", {
-    innerText: "Calculator",
+  // const headline = createElement("h2", {
+  //   innerText: "Calculator",
+  // });
+
+  const result = createElement("input", {
+    type: "text",
+    value: "",
+    placeholder: "0",
   });
 
-  const button1 = createButtonElement(1);
-  const button2 = createButtonElement(2);
-  const button3 = createButtonElement(3);
-  const button4 = createButtonElement(4);
-  const button5 = createButtonElement(5);
-  const button6 = createButtonElement(6);
-  const button7 = createButtonElement(7);
-  const button8 = createButtonElement(8);
-  const button9 = createButtonElement(9);
-  const button0 = createButtonElement(0);
-  const buttonPlus = createButtonElement("+");
-  const buttonMinus = createButtonElement("-");
-  const buttonMulti = createButtonElement("*");
-  const buttonDiv = createButtonElement("/");
-  const buttonPoint = createButtonElement(".");
+  const button1 = createElement("button", {
+    innerText: "1",
+    value: "1",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button2 = createElement("button", {
+    innerText: "2",
+    value: "2",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button3 = createElement("button", {
+    innerText: "3",
+    value: "3",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button4 = createElement("button", {
+    innerText: "4",
+    value: "4",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button5 = createElement("button", {
+    innerText: "5",
+    value: "5",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button6 = createElement("button", {
+    innerText: "6",
+    value: "6",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button7 = createElement("button", {
+    innerText: "7",
+    value: "7",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button8 = createElement("button", {
+    innerText: "8",
+    value: "8",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button9 = createElement("button", {
+    innerText: "9",
+    value: "9",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const button0 = createElement("button", {
+    innerText: "0",
+    value: "0",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonPlus = createElement("button", {
+    innerText: "+",
+    value: "+",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonMinus = createElement("button", {
+    innerText: "-",
+    value: "-",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonMulti = createElement("button", {
+    innerText: "*",
+    value: "*",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonDiv = createElement("button", {
+    innerText: "/",
+    value: "/",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonPoint = createElement("button", {
+    innerText: ".",
+    value: ".",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
+  const buttonReset = createElement("button", {
+    innerText: "AC",
+    value: "0",
+    onclick: function () {
+      result.value = "";
+    },
+  });
+  const buttonResult = createElement("button", {
+    innerText: "=",
+    value: "=",
+    onclick: function () {
+      result.value = result.value + this.value;
+    },
+  });
 
   return createElement("div", {
     className: "calculator",
     children: [
-      headline,
+      createElement("p", {
+        innerText: "CALCULATOR",
+        className: "headline",
+      }),
+      result,
       button1,
       button2,
       button3,
@@ -47,6 +162,8 @@ export function createCalculator() {
       buttonMulti,
       buttonDiv,
       buttonPoint,
+      buttonReset,
+      buttonResult,
     ],
   });
 }
