@@ -84,10 +84,6 @@ export function createCalculator() {
   return createElement("div", {
     className: "calculator",
     children: [
-      // createElement("p", {
-      //   innerText: "CALCULATOR",
-      //   className: "headline",
-      // }),
       result,
       numberButton(7),
       numberButton(8),

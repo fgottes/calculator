@@ -1,5 +1,4 @@
 .calculator {
-  background-color: grey;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6 1fr);
@@ -11,7 +10,6 @@
 
 .result {
   grid-template-columns: 1fr;
-  /* order: -1; */
   grid-column-start: 1;
   grid-column-end: span 4;
   line-height: 2.5em;
@@ -21,6 +19,7 @@
   color: black;
   border: none;
   margin-bottom: 10px;
+  padding-left: 0.9em;
 }
 .result::placeholder {
   padding-left: 0.9em;
@@ -35,8 +34,6 @@
   font-size: x-large;
 }
 .operator {
-  /* max-width: 2em; */
-  color: ;
   font-weight: bold;
   background-color: #d5ea83;
   border: none;
