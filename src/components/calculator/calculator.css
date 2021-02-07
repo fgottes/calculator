@@ -3,10 +3,15 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6 1fr);
   grid-gap: 3px;
-  padding: 15px;
+  padding: 30px;
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   border-radius: 0.5em;
   font-family: monospace;
+  padding-top: 60px;
+  /* /* border-bottom: 6px solid rgb(160, 34, 192);
+  border-right: 6px solid rgb(160, 34, 192);
+  border-left: 2px solid rgb(160, 34, 192);
+  border-top: 2px solid rgb(160, 34, 192); */
 }
 
 .result {
@@ -22,14 +27,21 @@
   margin-bottom: 10px;
   padding-left: 0.9em;
   border-radius: 5px;
+  border-bottom: 5px solid rgb(230, 162, 215);
+  border-right: 5px solid rgb(230, 162, 215);
+  border-left: 1px solid rgb(230, 162, 215);
+  border-top: 1px solid rgb(230, 162, 215);
 }
 .result::placeholder {
   color: black;
 }
+.result:focus {
+  outline: none;
+}
+
 .numberButton {
   color: black;
   font-weight: bold;
-  border: 2px, transparent;
   padding: 0.8em;
   background-image: linear-gradient(
     -225deg,
@@ -38,7 +50,17 @@
     #321575 100%
   );
   border-radius: 8px;
+  font-size: x-large;
+  border-bottom: 5px solid rgb(230, 162, 215);
+  border-right: 5px solid rgb(230, 162, 215);
+  border-left: 1px solid rgb(230, 162, 215);
+  border-top: 1px solid rgb(230, 162, 215);
 }
+
+.numberButton:focus {
+  outline: none;
+}
+
 .operator {
   font-weight: bold;
   background-image: linear-gradient(
@@ -49,8 +71,14 @@
   );
   padding: 0.8em;
   font-size: x-large;
-  border: 2px, transparent;
   border-radius: 8px;
+  border-bottom: 5px solid rgb(230, 162, 215);
+  border-right: 5px solid rgb(230, 162, 215);
+  border-left: 1px solid rgb(230, 162, 215);
+  border-top: 1px solid rgb(230, 162, 215);
+}
+.operator:focus {
+  outline: none;
 }
 
 .mathButton {
@@ -71,9 +99,12 @@
     #ff1361 67%,
     #fff800 100%
   );
-  border: none;
   padding: 0.5em;
   color: black;
   margin-top: 10px;
   border-radius: 8px;
+  border-bottom: 5px solid rgb(230, 162, 215);
+  border-right: 5px solid rgb(230, 162, 215);
+  border-left: 1px solid rgb(230, 162, 215);
+  border-top: 1px solid rgb(230, 162, 215);
 }
