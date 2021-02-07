@@ -11,6 +11,7 @@ export function createCalculator() {
   let hasCalculated = false;
 
   const result = createElement("input", {
+    className: "result",
     type: "text",
     value: "",
     placeholder: "0",
@@ -20,6 +21,7 @@ export function createCalculator() {
     createElement("button", {
       innerText: number,
       value: number,
+      className: "numberButton",
       onclick: () => {
         if (hasCalculated) {
           result.value = number;
@@ -39,6 +41,7 @@ export function createCalculator() {
 
   const operatorButton = (operator) =>
     createElement("button", {
+      className: "operator",
       innerText: operator,
       value: operator,
       onclick: () => {
@@ -48,6 +51,7 @@ export function createCalculator() {
     });
 
   const buttonPoint = createElement("button", {
+    className: "operator",
     innerText: ".",
     value: ".",
     onclick: function () {
@@ -55,6 +59,7 @@ export function createCalculator() {
     },
   });
   const buttonReset = createElement("button", {
+    className: "operator",
     innerText: "AC",
     value: "0",
     onclick: function () {
@@ -65,6 +70,7 @@ export function createCalculator() {
     },
   });
   const buttonResult = createElement("button", {
+    className: "equal",
     innerText: "=",
     value: "=",
     onclick: function () {
@@ -78,27 +84,27 @@ export function createCalculator() {
   return createElement("div", {
     className: "calculator",
     children: [
-      createElement("p", {
-        innerText: "CALCULATOR",
-        className: "headline",
-      }),
+      // createElement("p", {
+      //   innerText: "CALCULATOR",
+      //   className: "headline",
+      // }),
       result,
-      numberButton(1),
-      numberButton(2),
-      numberButton(3),
-      numberButton(4),
-      numberButton(5),
-      numberButton(6),
       numberButton(7),
       numberButton(8),
       numberButton(9),
-      numberButton(0),
       operatorButton("+"),
+      numberButton(4),
+      numberButton(5),
+      numberButton(6),
       operatorButton("-"),
+      numberButton(1),
+      numberButton(2),
+      numberButton(3),
       operatorButton("*"),
-      operatorButton("/"),
-      buttonPoint,
+      numberButton(0),
       buttonReset,
+      buttonPoint,
+      operatorButton("/"),
       buttonResult,
     ],
   });

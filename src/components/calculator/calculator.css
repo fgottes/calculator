@@ -2,11 +2,46 @@
   background-color: grey;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(6 1fr);
+  grid-gap: 3px;
+  padding: 15px;
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+  border-radius: 0.5em;
 }
 
+.result {
+  grid-template-columns: 1fr;
+  /* order: -1; */
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  line-height: 2.5em;
+  font-size: 2em;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  color: black;
+  border: none;
+  margin-bottom: 10px;
+}
+.result::placeholder {
+  padding-left: 0.9em;
+  color: black;
+}
 .numberButton {
-  color: red;
+  color: black;
+  font-weight: bold;
+  border: 0;
+  padding: 0.8em;
+  background-color: #ffe857;
+  font-size: x-large;
+}
+.operator {
+  /* max-width: 2em; */
+  color: ;
+  font-weight: bold;
+  background-color: #d5ea83;
+  border: none;
+  padding: 0.8em;
+  font-size: x-large;
 }
 
 .mathButton {
@@ -15,4 +50,14 @@
 
 .headline {
   display: grid;
+}
+.equal {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  font-size: 3em;
+  background-color: #73eb90;
+  border: none;
+  padding: 0.5em;
+  color: black;
+  margin-top: 10px;
 }
