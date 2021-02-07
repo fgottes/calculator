@@ -6,6 +6,7 @@
   padding: 15px;
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   border-radius: 0.5em;
+  font-family: monospace;
 }
 
 .result {
@@ -15,11 +16,12 @@
   line-height: 2.5em;
   font-size: 2em;
   font-weight: bold;
-  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-image: linear-gradient(-225deg, #b6cee8 0%, #f578dc 100%);
   color: black;
-  border: none;
+  border: 3px, transparent;
   margin-bottom: 10px;
   padding-left: 0.9em;
+  border-radius: 5px;
 }
 .result::placeholder {
   color: black;
@@ -27,17 +29,28 @@
 .numberButton {
   color: black;
   font-weight: bold;
-  border: 0;
+  border: 2px, transparent;
   padding: 0.8em;
-  background-color: #ffe857;
-  font-size: x-large;
+  background-image: linear-gradient(
+    -225deg,
+    #ff057c 0%,
+    #8d0b93 50%,
+    #321575 100%
+  );
+  border-radius: 8px;
 }
 .operator {
   font-weight: bold;
-  background-color: #d5ea83;
-  border: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   padding: 0.8em;
   font-size: x-large;
+  border: 2px, transparent;
+  border-radius: 8px;
 }
 
 .mathButton {
@@ -50,10 +63,17 @@
 .equal {
   grid-column-start: 1;
   grid-column-end: span 4;
-  font-size: 3em;
-  background-color: #73eb90;
+  font-size: 2.5em;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
   border: none;
   padding: 0.5em;
   color: black;
   margin-top: 10px;
+  border-radius: 8px;
 }
