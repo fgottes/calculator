@@ -22,7 +22,6 @@
   padding-left: 0.9em;
 }
 .result::placeholder {
-  padding-left: 0.9em;
   color: black;
 }
 .numberButton {
