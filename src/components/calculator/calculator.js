@@ -1,10 +1,6 @@
 import { createElement } from "../../utils/createElement.js";
 
 export function createCalculator() {
-  // const headline = createElement("h2", {
-  //   innerText: "Calculator",
-  // });
-
   let firstValue = 0;
   let secondValue = 0;
   let operatorValue = null;
